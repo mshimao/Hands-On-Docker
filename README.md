@@ -14,7 +14,7 @@ Um ponto importante dos requisistos é a questão da configuração do Hyper-V n
 
 - [Configuração do Hyper-V](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization)
 
-Após a leitura e configuração dos requisitos, agora é fazer o download do Docker Desktop for Windows e fazer a instalação, para isso seguir as instruções do link abaixo:
+Após a leitura e configuração dos requisitos, agora é fazer o download do Docker Desktop for Windows e a instalação, para isso siga as instruções do link abaixo:
 
 - [Download do Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
