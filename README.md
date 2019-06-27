@@ -1,4 +1,4 @@
-# Hands-On Docker para programadores Genexus
+# Hands-On Docker com Genexus
 
 Hands-On para introdução dos conceitos do Docker e sua utilização com o Genexus.
 
