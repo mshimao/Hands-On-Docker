@@ -4,7 +4,7 @@ Hands-On para introdução dos conceitos do Docker e sua utilização com o Gene
 
 ### Instalando o Docker
 
-Inicialmente é necessário configurar o ambiente para trabalharmos com o Docker e Genexus. Vamos instalar o Docker Desktop for Windows na mesma máquina que tem o Genexus instalado.
+Inicialmente é necessário configurar o ambiente para trabalharmos com o Docker e Genexus. Vamos instalar o Docker Desktop for Windows na mesma máquina que tem o Genexus  instalado.
 
 O primeiro passo é ler a documentação da Docker que explica os requisitos para a instalação do Docker Desktop for Windows:
 
