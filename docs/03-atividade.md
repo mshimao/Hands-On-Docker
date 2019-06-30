@@ -26,7 +26,21 @@ Crie uma pasta no seu drive C: chamada HandsOnDocker e copie o arquivo war para 
 Abra o Bloco de Notas e crie um arquivo chamado Dockerfile, como o arquivo deve ser sem extensão, temos que tirar a extensão txt que o Bloco de Notas coloca.
 
 ```bash
-C:>ren Dockerfile.txt Dockerfile
+C:\HandsOnDocker>ren Dockerfile.txt Dockerfile
+
+C:\HandsOnDocker>dir
+ O volume na unidade C não tem nome.
+ O Número de Série do Volume é DA2B-B761
+
+ Pasta de C:\HandsOnDocker
+
+30/06/2019  11:19    <DIR>          .
+30/06/2019  11:19    <DIR>          ..
+30/06/2019  11:50                65 Dockerfile
+30/06/2019  11:13             8.618 SampleWebApp.war
+               2 arquivo(s)          8.683 bytes
+               2 pasta(s)   12.898.099.200 bytes disponíveis
+
 ```
 
 Abra o arquivo com o Bloco de Notas, agora vamos colocar os comandos para instalar a aplicação de exemplo no Tomcat. Digite os comandos abaixo:
@@ -40,12 +54,12 @@ Esse comando informa que vamos usar a imagem com o nome tomcat como base da noss
 ```dockerfile
 COPY SampleWebApp.war /usr/local/tomcat/webapps/
 ```
-Esse comando copia o arquivo SampleWebApp.war para a pasta /usr/local/tomcat/webapps/ do imagem. Como essa pasta é a pasta raiz das aplicações, o tomcat no momento da inicialização irá instalar a aplicação dentro dele.
+Esse comando copia o arquivo SampleWebApp.war para a pasta /usr/local/tomcat/webapps/ da imagem. Como essa pasta é a pasta raiz das aplicações, o tomcat no momento da inicialização irá instalar a aplicação dentro dele.
 
 
 ![Dockerfile](imagens/dockerfile.png)
 
-Agora que temos a "receita" de como vai ser nossa nova imagem Docker vamos criá-la. Para isso é necessário dar build para gerar a nova imagem, vamos usar o comando [docker build](https://docs.docker.com/engine/reference/commandline/build/).
+Agora que temos a "receita" de como vai ser nossa nova imagem Docker, vamos criá-la. Para isso é necessário dar build para gerar a nova imagem, vamos usar o comando [docker build](https://docs.docker.com/engine/reference/commandline/build/).
 Abra um tela de linha de comando e se posicione na pasta C:\HandsOnDocker e digite o comando `docker build -t tomcatsample .` para gerar a nova imagem.
 
 ```bash
@@ -84,7 +98,9 @@ Abra um browser e digite a seguinte Url http://localhost:8888/SampleWebApp/.
 
 ![sample web app](imagens/samplewebapp.png)
 
-Liste os contêineres ativos e para o contêiner do sample com o comando `docker stop`.
+E como podemos ver, a aplicação de exemplo foi instalada com sucesso.
+
+Para seguirmos, liste os contêineres ativos e pare o contêiner do tomcatsample com o comando `docker stop`.
 
 ```bash
 C:\HandsOnDocker>docker ps
@@ -95,7 +111,7 @@ C:\HandsOnDocker>docker stop 7f0
 7f0
 ```
 
-Vimos como fazer o deploy de uma aplicação agora vamos ver como fazer isso no Genexus (ou no Visual Studio).
+Vimos como fazer o deploy de uma aplicação na mão, agora vamos ver como fazer isso com Genexus (ou com Visual Studio).
 
 Deploy com Genexus: [Atividade 03b](03b-atividade.md)
 

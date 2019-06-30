@@ -96,7 +96,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 fb1bb71d27e2        tomcat              "catalina.sh run"   About an hour ago   Up 11 minutes       0.0.0.0:8888->8080/tcp   xenodochial_elion
 ```
 
-A exclusão do contêiner não afeta a imagem da qual ele foi criado, execute o comando `docker images` e você verá que a imagem do hello-world ainda foi excluída.
+A exclusão do contêiner não afeta a imagem da qual ele foi criado, execute o comando `docker images` e você verá que a imagem do hello-world não foi excluída.
 
 ```bash
 C:\>docker images
