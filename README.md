@@ -19,3 +19,5 @@ Após a leitura e configuração dos requisitos, agora é fazer o download do Do
 - [Download do Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
 Com isso temos o ambiente preparado para executar os contêineres Docker.
+
+Próximo: [Atividade 01](docs/01-atividade.md)
