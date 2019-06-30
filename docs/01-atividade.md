@@ -26,7 +26,7 @@ C:\>docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS           NAMES
 ```
 
-Veja que não tem nenhum rodando, vamos executar uma variação do comando, `docker ps -a`:
+Veja que não existe nenhum contêiner rodando, vamos executar uma variação do comando ps e ver o que acontece. Execute o comando `docker ps -a`.
 
 ```bash
 c:\>docker ps -a
