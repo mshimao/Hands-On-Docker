@@ -111,7 +111,7 @@ C:\HandsOnDocker>docker stop 7f0
 7f0
 ```
 
-Vimos como fazer o deploy de uma aplicação na mão, agora vamos ver como fazer isso com Genexus (ou com Visual Studio).
+Vimos como fazer o deploy de uma aplicação na mão, agora vamos ver como fazer isso com o Genexus (ou com o Visual Studio).
 
 Deploy com Genexus: [Atividade 03b](03b-atividade.md)
 
