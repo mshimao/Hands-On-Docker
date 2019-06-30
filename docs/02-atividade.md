@@ -51,7 +51,7 @@ fb1bb71d27e2        tomcat              "catalina.sh run"   About a minute ago  
 ```
 Veja que são apresentados as informações do comando executado para iniciar o Tomcat, o mapeamento das portas e o nome que é gerado automaticamente.
 
-Vamos agora parar o contêiner com o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/), devemos fornecer um identificador para que o comando saiba qual contêiner parar, neste caso podemos informar as 3 primeiras caracteres do CONTAINER ID, devemos informar a quantidade de caracteres suficiente para que o Docker consiga indentificar apenas um contêiner.
+Vamos agora parar o contêiner com o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/), devemos fornecer um identificador para que o comando saiba qual contêiner parar, neste caso podemos informar os 3 primeiros caracteres do CONTAINER ID, devemos informar a quantidade de caracteres suficiente para que o Docker consiga indentificar apenas um contêiner.
 
 ```bash
 C:\>docker stop fb1
@@ -117,4 +117,4 @@ Deleted: sha256:af0b15c8625bb1938f1d7b17081031f649fd14e6b233688eea3c5483994a66a3
 
 Acesse o site da documentação do Docker para conhecer outros comandos do Docker CLI:
 
-[Documentação do Docker](https://docs.docker.com/reference/)
+- [Documentação do Docker](https://docs.docker.com/reference/)
