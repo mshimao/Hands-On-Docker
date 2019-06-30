@@ -57,7 +57,7 @@ Vamos agora parar o contêiner com o comando [docker stop](https://docs.docker.c
 C:\>docker stop fb1
 fb1
 ```
-Se executarmos o comando `docker ps -a` veremos que o contêiner do Tomcat está parada.
+Se executarmos o comando `docker ps -a` veremos que o contêiner do Tomcat está parado.
 
 ```bash
 C:\>docker ps -a
@@ -96,7 +96,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 fb1bb71d27e2        tomcat              "catalina.sh run"   About an hour ago   Up 11 minutes       0.0.0.0:8888->8080/tcp   xenodochial_elion
 ```
 
-Lembrando que a exclusão do contêiner não afeta a imagem da qual ele foi criado, execute o comando `docker images` e você verá que a imagem do hello-world ainda foi excluída.
+A exclusão do contêiner não afeta a imagem da qual ele foi criado, execute o comando `docker images` e você verá que a imagem do hello-world ainda foi excluída.
 
 ```bash
 C:\>docker images
@@ -118,3 +118,5 @@ Deleted: sha256:af0b15c8625bb1938f1d7b17081031f649fd14e6b233688eea3c5483994a66a3
 Acesse o site da documentação do Docker para conhecer outros comandos do Docker CLI:
 
 - [Documentação do Docker](https://docs.docker.com/reference/)
+
+Atividade extra, criar um contêiner informando um nome designidado por você e fazer ele executar em background não gerando saida no console.
