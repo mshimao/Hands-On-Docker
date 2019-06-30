@@ -121,7 +121,7 @@ System.Exception: GXApplication exception ---> System.Reflection.TargetInvocatio
 ```
 Um dos motivos pode ser porque o SQL Server não está configurado para receber conexões remotas via IP. Para configurar isso seguir as indicações do documento abaixo:
 
-- [Configurando-o-SQL-Server-para-Acesso-Remoto](pdfs/Configurando-o-SQL-Server-para-Acesso-Remoto.pdf)
+- [Configurando o SQL Server para Acesso Remoto](http://www.regilan.com.br/wp-content/uploads/2015/11/ROTEIRO-Configurando-o-SQL-Server-para-Acesso-Remoto.pdf)
 
 Se mesmo com essa configuração o erro persistir, edite a propriedade Server Name do Data Store colocando host.docker.internal no lugar do IP ou nome da máquina. Após isso dê build e faça novamente o deploy para o Docker pela opção Deploy Application do menu Build.
 
