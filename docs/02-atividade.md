@@ -119,4 +119,6 @@ Acesse o site da documentação do Docker para conhecer outros comandos do Docke
 
 - [Documentação do Docker](https://docs.docker.com/reference/)
 
-Atividade extra, criar um contêiner informando um nome designidado por você e fazer ele executar em background não gerando saida no console.
+**Atividade extra** criar um contêiner informando um nome informado por você e fazer ele executar em background não gerando saida no console.
+
+Próximo: [Atividade 03](03-atividade.md)
