@@ -2,7 +2,7 @@
 
 ## hello-world
 
-Neste primeiro exercicio vamos fazer o conhecido hello-world. Para isso abra um tela de linha comando e execute o comando abaixo:
+Neste primeiro exercicio vamos fazer o conhecido hello-world. Para isso abra um tela de linha comando e execute o comando `docker run hello-world`.
 
 ```bash
 C:\> docker run hello-world
