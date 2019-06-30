@@ -2,7 +2,7 @@
 
 ## Docker CLI
 
-Nesta atividade vamos explorar alguns comandos básicos do Docker CLI, inicialmente vamos executar o comando [docker pull](https://docs.docker.com/engine/reference/commandline/pull/) para executar o download da imagem para o nosso computador. Para isso iremos executar o comando `docker pull tomcat`.
+Nesta atividade vamos explorar alguns comandos básicos do Docker CLI, inicialmente vamos executar o comando [docker pull](https://docs.docker.com/engine/reference/commandline/pull/) para realizar o download da imagem para o computador. Para isso iremos executar o comando `docker pull tomcat`.
 
 ```bash
 C:\>docker pull tomcat
@@ -49,5 +49,72 @@ C:\>docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS                    NAMES
 fb1bb71d27e2        tomcat              "catalina.sh run"   About a minute ago   Up About a minute   0.0.0.0:8888->8080/tcp   xenodochial_elion
 ```
+Veja que são apresentados as informações do comando executado para iniciar o Tomcat, o mapeamento das portas e o nome que é gerado automaticamente.
 
+Vamos agora parar o contêiner com o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/), devemos fornecer um identificador para que o comando saiba qual contêiner parar, neste caso podemos informar as 3 primeiras caracteres do CONTAINER ID, devemos informar a quantidade de caracteres suficiente para que o Docker consiga indentificar apenas um contêiner.
 
+```bash
+C:\>docker stop fb1
+fb1
+```
+Se executarmos o comando `docker ps -a` veremos que o contêiner do Tomcat está parada.
+
+```bash
+C:\>docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                            PORTS               NAMES
+fb1bb71d27e2        tomcat              "catalina.sh run"   38 minutes ago      Exited (143) About a minute ago                       xenodochial_elion
+30567b2dd8d4        hello-world         "/hello"            3 hours ago         Exited (0) 3 hours ago                                trusting_jackson
+```
+
+Para iniciar um contêiner parado existe o comando [docker start](https://docs.docker.com/engine/reference/commandline/start/), igual ao comando stop temos que informar um identificador, neste caso usaremos o nome.
+
+```bash
+C:\>docker start xenodochial_elion
+xenodochial_elion
+```
+
+Se executarmos o comando `docker ps` veremos que o contêiner do Tomcat está rodando.
+
+```bash
+C:\>docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+fb1bb71d27e2        tomcat              "catalina.sh run"   44 minutes ago      Up 20 seconds       0.0.0.0:8888->8080/tcp   xenodochial_elion
+```
+
+Agora vamos remover o contêiner do hello-world utilizando o comando [docker rm](https://docs.docker.com/engine/reference/commandline/rm/) passado parte do CONTAINER ID.
+
+```bash
+C:\>docker rm 305
+305
+```
+
+Se listarmos os contêineres veremos que o contêiner hello-word foi excluido.
+
+```bash
+C:\>docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+fb1bb71d27e2        tomcat              "catalina.sh run"   About an hour ago   Up 11 minutes       0.0.0.0:8888->8080/tcp   xenodochial_elion
+```
+
+Lembrando que a exclusão do contêiner não afeta a imagem da qual ele foi criado, execute o comando `docker images` e você verá que a imagem do hello-world ainda foi excluída.
+
+```bash
+C:\>docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+tomcat              latest              5377fd8533c3        2 weeks ago         506MB
+hello-world         latest              fce289e99eb9        6 months ago        1.84kB
+```
+
+O comando para excluir uma imagem é [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/), vamos remover a imagem hello-world.
+
+```bash
+C:\>docker rmi hello-world
+Untagged: hello-world:latest
+Untagged: hello-world@sha256:41a65640635299bab090f783209c1e3a3f11934cf7756b09cb2f1e02147c6ed8
+Deleted: sha256:fce289e99eb9bca977dae136fbe2a82b6b7d4c372474c9235adc1741675f587e
+Deleted: sha256:af0b15c8625bb1938f1d7b17081031f649fd14e6b233688eea3c5483994a66a3
+```
+
+Acesse o site da documentação do Docker para conhecer outros comandos do Docker CLI:
+
+[Documentação do Docker](https://docs.docker.com/reference/)
