@@ -6,7 +6,7 @@ Nesta atividade vamos ver como utilizar o Dockerfile para fazermos o deploy de a
 
 Inicialmente faça o download da aplicação de exemplo que iremos instalar. 
 
-- [SampleWebApp.war](https://github.com/mshimao/Hands-On-Docker-com-Genexus/tree/master/dockerfile/SampleWebApp.war)
+- [SampleWebApp.war](https://github.com/mshimao/Hands-On-Docker-com-Genexus/tree/master/docs/dockerfile/SampleWebApp.war)
 
 Crie uma pasta no seu drive C: chamada HandsOnDocker e copie o arquivo war para esta pasta.
 
