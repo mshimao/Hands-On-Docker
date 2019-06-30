@@ -36,6 +36,18 @@ São apresentados todas as imagens que foram baixadas para o computador.
 
 Para executar um contêiner existe o comando [docker run](https://docs.docker.com/engine/reference/commandline/run/), vamos executar a imagem do Tomcat com o a comando `docker run -it -p 8888:8080 tomcat`. O parâmetro `-it` faz o contêiner executar em modo interativo e o parâmetro `-p`  faz o mapeamento da porta do contêiner em uma porta no host, neste caso mapeando a porta 8080 do contêiner para a porta 8888 do computador, dessa forma o Tomcat estará visivel pela porta 8888. 
 
+```bash
+c:\>docker run -it -p 8888:8080 tomcat
+Using CATALINA_BASE:   /usr/local/tomcat
+Using CATALINA_HOME:   /usr/local/tomcat
+Using CATALINA_TMPDIR: /usr/local/tomcat/temp
+Using JRE_HOME:        /usr/local/openjdk-8
+Using CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar
+30-Jun-2019 15:33:14.479 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.42
+30-Jun-2019 15:33:14.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 4 2019 20:29:04 UTC
+...
+```
+
 Abra o browser e digite a seguinte Url http://localhost:8888/ para acessar o Tomcat.
 
 ![tela do tomcat](imagens/tomcat.png)
