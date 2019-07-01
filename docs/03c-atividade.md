@@ -27,3 +27,4 @@ Um dos motivos pode ser porque o SQL Server não está configurado para receber 
 
 Se mesmo com essa configuração o erro persistir, edite a propriedade Server Name do Data Store colocando host.docker.internal no lugar do IP ou nome da máquina. Após isso dê build e faça novamente o deploy para o Docker pela opção Deploy Application do menu Build.
 
+Próximo: [Atividade 04](04-atividade.md)
