@@ -21,7 +21,7 @@ Status: Downloaded newer image for alpine:latest
 Dockerfile
 SampleWebApp.war
 ```
-Vemos que o Docker executou mapeou a pasta corretamente e mostrou o conteúdo.
+Vemos que o Docker mapeou a pasta corretamente e mostrou o conteúdo.
 
 Agora vamos executar criar o contêiner usando o parâmetro `-it` para podemos executar comandos no bash do Linux. Após o contêiner subir execute o comando ls para listar as pastas.
 
@@ -44,7 +44,7 @@ Dockerfile        SampleWebApp.war  teste.txt
 /data #
 ```
 
-Verifique se na pasta C:\HandsOnDocker aparece o arquivo teste.txt.
+Verifique se na pasta C:\HandsOnDocker do Windows aparece o arquivo teste.txt.
 
 ### Volumes
 
@@ -58,7 +58,7 @@ C:\HandsOnDocker>docker volume ls
 DRIVER              VOLUME NAME
 local               dados
 ```
-Crie agora um contêiner usando esse volume, para isso use o parâmetro `-v dados:/var/dados`.
+Crie agora um contêiner usando esse volume, para isso use o parâmetro `-v dados:/var/dados`, esse parâmetro mapea o volume dados para a pasta /var/dados do contêiner.
 
 ```bash
 C:\HandsOnDocker>docker run -it --name servidor -v dados:/var/dados alpine
@@ -68,22 +68,28 @@ cache  dados  empty  lib    local  lock   log    opt    run    spool  tmp
 /var #
 ```
 
-Agora vá até a pasta /var/dados e crie uma arquivo texto chamado teste.txt usando o comando `cat > teste.txt` e CRTRL + D para sair do arquivo.
+Agora vá até a pasta /var/dados e crie uma arquivo texto chamado teste.txt usando o comando `cat > teste.txt` e CRTL + D para sair do arquivo.
 
 ```bash
 /var/dados # ls
 teste.txt
 ```
 
-Para sair do shell do Linux, digite `exit`.
-
-Agora vamos criar um outro contêiner usando o volume dados, dando um nome diferente do anterior. Verifique se o arquivo criado anteriormente está lá.
+Abra outra tela de linha de comando, vamos criar um outro contêiner usando o volume dados, dando um nome diferente do anterior. Verifique se o arquivo criado anteriormente está lá.
 
 ```bash
 C:\HandsOnDocker>docker run -it --name servidor2 -v dados:/var/dados alpine
 ```
 
-Agora que conseguimos persistir informações mesmo que o contêiner pare ou seja apagado, podemos usar o volume para armazenar as bases de dados de um servidor de banco de dados ou outros dados relevantes.
+Crie um outro arquivo na pasta dados e vá para a tela do contêiner anterior e liste o conteúdo da pasta, você verá que o arquivo criado aparece, ou seja os dois contêineres estão compartilhando o mesmo volume. 
+
+```bash
+/var/dados # ls
+teste.txt   teste2.txt
+/var/dados #
+```
+
+Agora conseguimos persistir informações mesmo que o contêiner pare ou seja apagado, podemos usar o volume para armazenar as bases de dados de um servidor de banco de dados ou outros dados relevantes.
 
 
 ### Atividade Extra
