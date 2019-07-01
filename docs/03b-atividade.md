@@ -112,6 +112,9 @@ Vamos acessar a aplicação abrindo o browser e digitando na Url http://localhos
 
 ![web app gx no docker](imagens/webappgxnodocker.png)
 
+
+Abra a transação e insira um novo registro na base de dados, e veja o que acontece.
+
 Se a configuração do SQL do host não permitir conexões remotas pode surgir o erro abaixo no console do Docker.
 
 ```bash

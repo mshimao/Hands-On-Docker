@@ -2,8 +2,9 @@
 
 ## Docker Volume
 
+### Acessando uma pasta do Host
 
-Para mapear uma pasta do Windows para um volume do Docker, inicialmente é necessário habilitar o Shared Drive no Docker Desktop.
+Para mapear uma pasta do Windows para uma pasta de um contêiner do Docker inicialmente é necessário habilitar o Shared Drive no Docker Desktop.
 Na opção Shared Drive, selecione o drive C e clique em Apply. Será solicitado a senha do administrador para liberar o acesso do Docker Host ao drive C.
 
 ![Shared Drive](imagens/volumewindows.png)
@@ -32,12 +33,12 @@ data   etc    lib    mnt    proc   run    srv    tmp    var
 / #
 ```
 
-Execute o comando `cd data` para entrar na pasta. Agora vamos criar uma aquivo texto usando a instrução `cat > teste.txt`. Digite alguma coisa e depois aperte CTRL + C para sair do arquivo. Execute o comando `ls` para listar os arquivos.
+Execute o comando `cd data` para entrar na pasta. Agora vamos criar uma aquivo texto usando a instrução `cat > teste.txt`. Digite alguma coisa e depois aperte CTRL + D para sair do arquivo. Execute o comando `ls` para listar os arquivos.
 
 ```bash
 / # cd data
 /data # cat > teste.txt
-texto de teste^C
+texto de teste
 /data # ls
 Dockerfile        SampleWebApp.war  teste.txt
 /data #
@@ -45,5 +46,50 @@ Dockerfile        SampleWebApp.war  teste.txt
 
 Verifique se na pasta C:\HandsOnDocker aparece o arquivo teste.txt.
 
+### Volumes
+
+Agora vamos trabalhar com volumes de forma diferente, vamos criar um volume usando o comando `docker volume create` como o nome de dados.
+
+```bash
+C:\HandsOnDocker>docker volume create dados
+dados
+
+C:\HandsOnDocker>docker volume ls
+DRIVER              VOLUME NAME
+local               dados
+```
+Crie agora um contêiner usando esse volume, para isso use o parâmetro `-v dados:/var/dados`.
+
+```bash
+C:\HandsOnDocker>docker run -it --name servidor -v dados:/var/dados alpine
+/ # cd var
+/var # ls
+cache  dados  empty  lib    local  lock   log    opt    run    spool  tmp
+/var #
+```
+
+Agora vá até a pasta /var/dados e crie uma arquivo texto chamado teste.txt usando o comando `cat > teste.txt` e CRTRL + D para sair do arquivo.
+
+```bash
+/var/dados # ls
+teste.txt
+```
+
+Para sair do shell do Linux, digite `exit`.
+
+Agora vamos criar um outro contêiner usando o volume dados, dando um nome diferente do anterior. Verifique se o arquivo criado anteriormente está lá.
+
+```bash
+C:\HandsOnDocker>docker run -it --name servidor2 -v dados:/var/dados alpine
+```
+
+Agora que conseguimos persistir informações mesmo que o contêiner pare ou seja apagado, podemos usar o volume para armazenar as bases de dados de um servidor de banco de dados ou outros dados relevantes.
 
 
+### Atividade Extra
+
+Se você quiser testar isso com o MySQL siga os passos do post abaixo.
+
+- [Criando volumes com Docker](https://blog.alura.com.br/criando-volumes-com-docker/)
+
+Próximo: [Atividade 05](05-atividade.md)
