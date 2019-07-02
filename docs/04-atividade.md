@@ -96,6 +96,6 @@ Agora conseguimos persistir informações mesmo que o contêiner pare ou seja ap
 
 Se você quiser testar isso com o MySQL siga os passos do post abaixo.
 
-- [Criando volumes com Docker](https://blog.alura.com.br/criando-volumes-com-docker/)
+- [Blog da Alura -Criando volumes com Docker](https://blog.alura.com.br/criando-volumes-com-docker/)
 
 Próximo: [Atividade 05](05-atividade.md)
