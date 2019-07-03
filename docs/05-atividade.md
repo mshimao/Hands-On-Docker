@@ -6,6 +6,10 @@
 
 Crie na pasta C:\HandsOnDocker um arquivo com o nome docker-compose.yml e digite o conteúdo abaixo.
 
+Dica: o arquivo YAML segue algumas regras de formatação que podem ser vistas neste post da [Wikipedia - YAML](https://pt.wikipedia.org/wiki/YAML).
+
+Para validar o arquivo YAML use o validador online [YAML Validator](https://codebeautify.org/yaml-validator).
+
 ```docker-compose
 version: '3.1'
 
@@ -33,6 +37,7 @@ services:
 ```
 
 Abra uma tela de linha de comando e vá até a pasta C:\HandsOnDocker, vamos rodar o comando `docker-compose up` que irá executar o arquivo docker-compose.yml.
+
 
 ```bash
 C:\HandsOnDocker>docker-compose up
@@ -73,5 +78,9 @@ db_1         | 2019-07-02T00:10:56.146837Z 0 [Warning] No existing UUID has been
 Após o processamento parar, abra um browser e acesse a Url http://localhost:8080, o site do Wordpress estará pronto para ser inicializado.
 
 ![Wordpress](imagens/wordpress.png)
+
+Implantação de uma aplicação Genexus com Docker Compose: [Atividade 05b](05b-atividade.md).
+
+Usando o Docker Compose com o Visual Studio: [Atividade 05b](05c-atividade.md).
 
 
