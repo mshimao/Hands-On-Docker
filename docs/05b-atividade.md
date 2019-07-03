@@ -20,7 +20,7 @@ Use a imagem do MySQL que já foi baixada na atividade anterior para subir o con
 ```bash
 mysql:5.7
 ```
-Também será necessário configurar a senha do root informanado o valor da variável MYSQL_ROOT_PASSWORD no parâmetro -e (variáveis de ambientes do contêiner).
+Também será necessário configurar a senha do root informando o valor da variável MYSQL_ROOT_PASSWORD no parâmetro -e (variáveis de ambientes do contêiner).
 
 ``` bash
 -e MYSQL_ROOT_PASSWORD=password 
@@ -28,7 +28,7 @@ Também será necessário configurar a senha do root informanado o valor da vari
 
 Depois que o contêiner estiver ativo, conecte com o HeidiSQL para verificar se o MySQL está funcionando adequadamente.
 
-Agora crie um enviroment novo no Genexus com .NET Core e MySQL.
+Agora crie um environment novo no Genexus com .NET Core e MySQL.
 
 ![Genexus env](imagens/genexus-env.png)
 
