@@ -44,4 +44,4 @@ Um ponto importante é a configuração da conexão da aplicação com o banco d
 
 - [Application Configuration using Environment Variables](https://wiki.genexus.com/commwiki/servlet/wiki?39459,Application+Configuration+using+Environment+Variables)
 
-Com o arquivo editado, execute o comando `docker-compose up` e veja se a aplicação executa corretamente.
+Com o arquivo docker-compose.yml editado, execute o comando `docker-compose up` e veja se a aplicação executa corretamente.
