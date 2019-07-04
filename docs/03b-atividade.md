@@ -10,7 +10,7 @@ Após a instalação do requisitos do gerador criar uma KB com o environment .NE
 
 ![KB NET Core](imagens/geradornetcore.png)
 
-Com a KB criada, fazer o download do xpz ??? e importar para a KB. Crie a base de dados SQL Server para os dados e rode a aplicação.
+Com a KB criada, fazer o download do xpz [HandsOnDocker.xpz](genexus/HandsOnDocker.xpz) e importar para a KB. Crie a base de dados SQL Server para os dados e rode a aplicação.
 
 ![Web App GX](imagens/webappgx.png)
 
