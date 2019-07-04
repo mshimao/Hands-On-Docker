@@ -10,7 +10,7 @@ Após a instalação do requisitos do gerador criar uma KB com o environment .NE
 
 ![KB NET Core](imagens/geradornetcore.png)
 
-Com a KB criada, fazer o download do xpz [HandsOnDocker.xpz](genexus/HandsOnDocker.xpz) e importar para a KB. Crie a base de dados SQL Server para os dados e rode a aplicação.
+Com a KB criada, fazer o download do arquivo xpz [HandsOnDocker.xpz](genexus/HandsOnDocker.xpz) e importar para a KB. Crie a base de dados SQL Server para os dados e rode a aplicação.
 
 ![Web App GX](imagens/webappgx.png)
 
@@ -126,6 +126,6 @@ Um dos motivos pode ser porque o SQL Server não está configurado para receber 
 
 - [Configurando o SQL Server para Acesso Remoto](http://www.regilan.com.br/wp-content/uploads/2015/11/ROTEIRO-Configurando-o-SQL-Server-para-Acesso-Remoto.pdf)
 
-Se mesmo com essa configuração o erro persistir, edite a propriedade Server Name do Data Store colocando host.docker.internal no lugar do IP ou nome da máquina. Após isso dê build e faça novamente o deploy para o Docker pela opção Deploy Application do menu Build.
+Se mesmo com essa configuração o erro persistir, edite a propriedade Server Name do Data Store colocando **host.docker.internal** no lugar do IP ou nome da máquina. Após isso dê build e faça novamente o deploy para o Docker pela opção Deploy Application do menu Build.
 
 Próximo: [Atividade 04](04-atividade.md)
